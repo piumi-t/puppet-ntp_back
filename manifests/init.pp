@@ -43,16 +43,16 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class ntp(
-  String $pacakage_name     = $::ntp::params::package_name,
-  String $package_ensure    = $::ntp::params::package_ensure,
-  String $config_name       = $::ntp::params::config_name,
-  String $config_file_mode  = $::ntp::params::config_file_mode,
-  Array[String] $servers    = $::ntp::params::servers,
-  String $service_ensure    = $::ntp::params::service_ensure,
-  Boolean $service_enable   = $::ntp::params::service_enable,
-  String $service_name      = $::ntp::params::service_name,
-  String $service_hasstatus = $::ntp::params::service_hasstatus,
-  String $service_restart   = $::ntp::params::service_restart,
+  String $pacakage_name       = $::ntp::params::package_name,
+  String $package_ensure      = $::ntp::params::package_ensure,
+  String $config_name         = $::ntp::params::config_name,
+  String $config_file_mode    = $::ntp::params::config_file_mode,
+  Array[String] $servers      = $::ntp::params::servers,
+  String $service_ensure      = $::ntp::params::service_ensure,
+  Boolean $service_enable     = $::ntp::params::service_enable,
+  String $service_name        = $::ntp::params::service_name,
+  Boolean $service_hasstatus  = $::ntp::params::service_hasstatus,
+  Boolean $service_hasrestart = $::ntp::params::service_hasrestart,
 ) inherits ::ntp::params {
 
   class { '::ntp::install': }
